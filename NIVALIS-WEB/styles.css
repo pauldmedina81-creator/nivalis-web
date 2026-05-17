@@ -1,0 +1,1231 @@
+/* =========================
+   NIVALIS - Estilo Final Profesional con fondos degradados
+   ========================= */
+
+/* BASE GENERAL */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  color: #240046;
+  text-align: center;
+
+  /* Fondo global elegante y moderno */
+  background:
+    radial-gradient(circle at top right,
+      rgba(0, 180, 216, 0.08) 0%,
+      transparent 35%
+    ),
+    radial-gradient(circle at bottom left,
+      rgba(183, 247, 212, 0.08) 0%,
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #fdfcff 0%,
+      #f5f0ff 20%,
+      #ede5fb 45%,
+      #e8dcfa 70%,
+      #f8fcff 100%
+    );
+
+  background-attachment: fixed;
+}
+
+/* HEADER - Menú fijo superior */
+.header {
+  background: linear-gradient(135deg, #c7a6f7 0%, #8a4de8 50%, #240046 100%);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo img { width: 140px; }
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+}
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.menu a:hover { color: #00b4d8; }
+
+/* HERO - Inicio */
+.hero {
+  background: linear-gradient(to bottom, #c7a6f7, #240046);
+  padding: 100px 20px;
+  color: #fff;
+}
+.hero-text h1 { font-size: 28px; font-weight: 800; }
+.hero-text p { font-size: 16px; margin: 15px 0; color: #e0d7f8; }
+.btn {
+  background: #00b4d8;F
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* SOBRE NOSOTROS */
+.about-layout {
+  background: linear-gradient(to bottom, #f3f0ff, #d9c2f5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+.about-right img { width: 100%; max-width: 350px; margin-top: 20px; }
+
+/* QUIÉNES SOMOS */
+.quienes-somos {
+  background: linear-gradient(to bottom, #ece9f9, #c7a6f7);
+  color: #240046;
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+
+/* SERVICIOS */
+.cards {
+  background: linear-gradient(to bottom, #b388eb, #8a4de8);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 60px 20px;
+}
+.card {
+  background: #fff;
+  color: #240046;
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+}
+.card img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-height: 160px;
+}
+
+/* Botellas con jerarquía (Mobile First) */
+.card img.botella-1L { max-width: 70px; }
+.card img.botella-7L { max-width: 90px; }
+.card img.botella-20L { max-width: 110px; }
+
+/* Máquina */
+.card img.maquina {
+  max-width: 100px;
+  height: auto;
+}
+
+/* PROCESO */
+.proceso-timeline {
+  background: linear-gradient(to bottom, #240046, #00b4d8);
+  padding: 60px 20px;
+  color: #fff;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.timeline-step {
+  background: #fff;
+  color: #240046;
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.step-number {
+  background: #00b4d8;
+  color: #fff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* IMPACTO */
+.planet-care {
+  background: linear-gradient(to bottom, #ffffff, #f3f0ff);
+  color: #240046;
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+.planet-care img { width: 300px; }
+
+/* UBICANOS */
+.ubicacion-publicitaria {
+  background: linear-gradient(to bottom, #d9c2f5, #c7a6f7);
+  padding: 60px 20px;
+}
+.ubicacion-publicitaria img {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* CONTACTO */
+.contacto-final {
+  background: linear-gradient(to bottom, #240046, #8a4de8);
+  color: #fff;
+  padding: 60px 20px;
+}
+
+/* =========================
+   Media Queries para escritorio
+   ========================= */
+@media (min-width: 769px) {
+  .hero-text h1 { font-size: 36px; }
+  .cards { flex-direction: row; gap: 40px; }
+  .card img { max-height: 200px; }
+  .card img.botella-1L { max-width: 100px; }
+  .card img.botella-7L { max-width: 130px; }
+  .card img.botella-20L { max-width: 160px; }
+  .card img.maquina { max-width: 120px; }
+  .timeline { flex-direction: row; justify-content: space-between; }
+  .timeline-step { width: 18%; }
+  .planet-care { display: flex; justify-content: space-between; }
+  .ubicacion-publicitaria { display: flex; justify-content: space-between; }
+  .planet-care img { width: 500px; }
+  .ubicacion-publicitaria img { max-width: 600px; }
+}
+/* Botón hamburguesa oculto en escritorio */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* oculto por defecto */
+    flex-direction: column;
+    background: linear-gradient(135deg, #8a4de8, #240046);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 70%;
+    padding: 20px;
+    border-radius: 0 0 0 15px;
+    box-shadow: -4px 6px 12px rgba(0,0,0,0.3);
+  }
+
+  .menu a {
+    padding: 12px 0;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .hamburger {
+    display: block; /* visible en móviles */
+  }
+
+  /* Clase activa para mostrar menú */
+  .menu.active {
+    display: flex;
+  }
+}
+/* =========================
+   Proceso de Filtración y Purificación
+   ========================= */
+.timeline-step img {
+  width: 100%;
+  max-width: 160px;
+  margin: 10px auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .timeline-step img {
+    max-width: 120px;
+  }
+}
+/* =========================
+   Íconos de contacto
+   ========================= */
+#contacto a img {
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: none;
+}
+
+#contacto a img:hover {
+  transform: scale(1.2);
+}
+/* =========================
+   Mensaje debajo de envases
+   ========================= */
+.mensaje-envases {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* degradado azul */
+  border-radius: 8px;
+  color: #fff;
+}
+
+.mensaje-envases p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.mensaje-envases h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* =========================
+   Ajustes de orden en escritorio
+   ========================= */
+@media (min-width: 769px) {
+  /* Centrar bloque A */
+  .about-left {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+  }
+
+  /* Crear bloque G con dos columnas: F (C,D,E) y B (máquina) */
+  .about-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  /* Contenedor de columnas */
+  .about-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Bloque F (C, D, E) */
+  .features-horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+  }
+
+  .feature {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+  }
+
+  /* Bloque B (máquina NIVALIS) */
+  .about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-right img {
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* Reducir espacio general */
+  .about-layout {
+    background: linear-gradient(to bottom, #f3f0ff, #d9c2f5);
+    padding: 40px 20px;
+  }
+}
+@media (min-width: 769px) {
+  /* Bloque A centrado */
+  .about-left {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+  }
+
+  /* Bloque G: dos columnas */
+  .about-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Bloque F (C, D, E) en fila */
+  .features-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1;
+  }
+
+  /* Cada feature */
+  .feature {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+
+  /* Reducir tamaño de imágenes */
+  .feature img {
+    max-width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Bloque B (máquina) */
+  .about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-right img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+@media (min-width: 769px) {
+  /* Centrar bloque A (título y texto) */
+  .about-left {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+  }
+
+  /* Bloque G: columnas F y B */
+  .about-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Bloque B (Pureza, Innovación, Sostenibilidad) */
+  .features-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* centrado vertical */
+    gap: 30px;
+    flex: 1;
+    transform: translateY(40px); /* baja el bloque B */
+  }
+
+  /* Cada feature */
+  .feature {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+
+  /* Reducir tamaño de imágenes dentro de los features */
+  .feature img {
+    max-width: 55px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Bloque A (máquina NIVALIS) */
+  .about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Tamaño regulable de la máquina */
+  .about-right img {
+    max-width: 900px; /* aumenta tamaño */
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  /* Clase opcional para agrandar más la máquina */
+  .about-right img.large {
+    max-width: 450px;
+  }
+}
+@media (min-width: 769px) {
+  /* Contenedor general */
+  .quienes-somos {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #eae6f9, #c9aef7);
+  }
+
+  /* Título */
+  .quienes-somos h2 {
+    font-weight: 800;
+    margin-bottom: 25px;
+  }
+
+  /* Primer párrafo (3 renglones) */
+  .quienes-somos p:first-of-type {
+    max-width: 900px; /* controla el ancho para 3 líneas */
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+  }
+
+  /* Segundo párrafo (1 renglón) */
+  .quienes-somos h3:nth-of-type(1) + p {
+    max-width: 600px; /* más estrecho para una sola línea */
+    margin: 0 auto 40px auto;
+    line-height: 1.4;
+  }
+
+  /* Tercer párrafo (2 renglones) */
+  .quienes-somos h3:nth-of-type(2) + p {
+    max-width: 800px; /* ancho medio para dos líneas */
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+@media (min-width: 769px) {
+  /* Contenedor general de las tarjetas */
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* Bloque A (mensaje-envases) */
+  .mensaje-envases {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 40px; /* baja el bloque A hacia la posición del bloque B */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  /* Centrar el texto dentro del bloque A */
+  .mensaje-envases p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .mensaje-envases h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+  }
+}
+@media (min-width: 769px) {
+  .planet-care {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #eae6f9, #c9aef7);
+  }
+
+  .planet-care h2 {
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .planet-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .planet-image img {
+    max-width: 700px; /* ajusta según el tamaño deseado */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .planet-care p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+  }
+}
+@media (min-width: 769px) {
+  .planet-care {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center; /* centra horizontalmente */
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #eae6f9, #c9aef7);
+  }
+
+  .planet-care h2 {
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .planet-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .planet-image img {
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .planet-care p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+  }
+}
+@media (min-width: 769px) {
+  .ubicacion-publicitaria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center; /* centra horizontalmente */
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #c9aef7, #b48cf2);
+  }
+
+  .ubicacion-publicitaria h2 {
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .mapa-nivalis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .mapa-nivalis img {
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Lista horizontal */
+  .ubicaciones-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* permite ajustar si la pantalla es más pequeña */
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .ubicacion-item {
+    font-size: 1.1rem;
+    color: #2c2c2c;
+  }
+
+  .ubicacion-item a {
+    color: #0072ff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 8px;
+  }
+
+  .ubicacion-item a:hover {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 769px) {
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* izquierda más amplia */
+    grid-template-rows: auto auto;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* Bloque H */
+  .bloque-h {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .bloque-h h2 {
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .bloque-h p {
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  /* Bloque G */
+  .bloque-g {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .features-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .feature {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+    transition: none;
+  }
+
+  .feature img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Bloque F (máquina) */
+  .bloque-f {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bloque-f .maquina-grande {
+    max-width: 620px;
+    height: auto;
+    transform: scale(1.15);
+  }
+}
+/* Estilo general (pantallas grandes) */
+.maquina-grande {
+  max-width: 300px; /* tamaño reducido en escritorio */
+  width: 100%;
+  height: auto;
+}
+
+/* Ajuste solo para móviles */
+@media (max-width: 768px) {
+  .maquina-grande {
+    max-width: 200px; /* tamaño más pequeño en celulares */
+    width: 100%;
+    height: auto;
+  }
+}
+/* Solo afecta pantallas grandes (escritorio) MAQUINA GRANDE */
+@media (min-width: 769px) {
+  .maquina-grande {
+    position: relative; /* permite moverla dentro de su contenedor */
+    top: 20px;          /* mueve hacia abajo */
+    left: 30px;         /* mueve hacia la derecha */
+    /* Puedes usar valores negativos para mover hacia arriba o izquierda */
+    /* Ejemplo: top: -20px; left: -30px; */
+  }
+}
+/* Solo afecta pantallas grandes (escritorio) */
+@media (min-width: 769px) {
+  /* Bloque Sobre Nosotros */
+  .bloque-h {
+    position: relative;
+    top: 20px;    /* mueve hacia abajo */
+    left: 140px;   /* mueve hacia la derecha */
+    /* usa valores negativos para mover hacia arriba o izquierda */
+  }
+
+  /* Bloque Pureza, Innovación y Sostenibilidad */
+  .bloque-g {
+    position: relative;
+    top: 100 px;   /* mueve hacia arriba */
+    left: 40px;   /* mueve hacia la derecha */
+  }
+}
+@media (min-width: 769px) {
+  /* Centrado del bloque Sobre Nosotros */
+  .bloque-h {
+    text-align: center;         /* centra el texto */
+    margin: 0 auto;             /* centra el contenedor */
+    left: 0;                    /* elimina desplazamiento lateral */
+    top: 0;                     /* elimina desplazamiento vertical */
+  }
+
+  .bloque-h h2 {
+    display: inline-block;      /* mantiene el ícono y título juntos */
+    vertical-align: middle;
+  }
+
+  .bloque-h p {
+    max-width: 800px;           /* controla el ancho del texto */
+    margin: 15px auto 0 auto;   /* centra el párrafo */
+    line-height: 1.6;
+  }
+}
+.sobre-nosotros-extra {
+  text-align: center;
+  margin: 40px auto 0 auto;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+.sobre-nosotros-extra h3 {
+  font-weight: 700;
+  margin-top: 25px;
+  color: #240046;
+}
+
+.sobre-nosotros-extra p {
+  margin: 10px auto;
+  font-size: 1rem;
+  color: #2c2c2c;
+  max-width: 800px;
+}
+
+/* Escritorio */
+@media (min-width: 769px) {
+  .sobre-nosotros-extra {
+    padding: 20px 40px;
+  }
+  .sobre-nosotros-extra h3 {
+    font-size: 1.3rem;
+  }
+  .sobre-nosotros-extra p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .sobre-nosotros-extra {
+    padding: 15px 20px;
+  }
+  .sobre-nosotros-extra h3 {
+    font-size: 1.1rem;
+  }
+  .sobre-nosotros-extra p {
+    font-size: 0.95rem;
+  }
+}
+/* Ajuste visual del bloque Sobre Nosotros y Sensibilización */
+.bloque-h,
+.sobre-nosotros-extra {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.4; /* reduce el espacio entre renglones */
+}
+
+.bloque-h h2,
+.sobre-nosotros-extra h3 {
+  font-size: 1.1rem; /* reduce tamaño del título */
+  font-weight: 700;
+  color: #240046;
+  margin-bottom: 10px;
+}
+
+.bloque-h p,
+.sobre-nosotros-extra p {
+  font-size: 0.95rem; /* reduce tamaño del texto */
+  color: #2c2c2c;
+  margin: 5px auto 15px auto; /* compacta el espacio vertical */
+  line-height: 1.4; /* mantiene lectura fluida pero más ajustada */
+  max-width: 800px;
+}
+
+/* Ajuste para escritorio */
+@media (min-width: 769px) {
+  .bloque-h h2,
+  .sobre-nosotros-extra h3 {
+    font-size: 1.2rem;
+  }
+
+  .bloque-h p,
+  .sobre-nosotros-extra p {
+    font-size: 1rem;
+  }
+}
+
+/* Ajuste para móvil */
+
+@media (min-width: 769px) {
+  /* Hover solo para las botellas en escritorio */
+  .cards .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cards .card:hover {
+    transform: translateY(-8px); /* se eleva ligeramente */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25); /* sombra más marcada */
+    cursor: pointer;
+  }
+
+  .cards .card:hover h3,
+  .cards .card:hover span {
+    color: #00b4d8; /* cambia color del título y precio */
+  }
+
+  .cards .card:hover img {
+    transform: scale(1.05); /* agranda la botella suavemente */
+    transition: transform 0.3s ease;
+  }
+}
+/* === Ajuste visual solo para escritorio === */
+@media (min-width: 1024px) {
+  .proceso-card {
+    width: 260px;           /* ancho uniforme */
+    height: 420px;          /* alto igual para todas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .proceso-card img {
+    width: 180px;           /* tamaño consistente de imagen */
+    height: 180px;
+    object-fit: contain;
+  }
+}
+
+/* === Mantener responsive en móvil === */
+@media (max-width: 1023px) {
+  .proceso-card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .proceso-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Contenedor principal */
+.proceso-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;   /* fuerza que todas las tarjetas tengan la misma altura */
+  flex-wrap: wrap;
+}
+
+/* Tarjetas del proceso */
+.proceso-card {
+  flex: 1 1 220px;        /* ancho flexible pero mínimo 220px */
+  max-width: 260px;       /* límite para que no se estiren demasiado */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Imagen dentro de cada tarjeta */
+.proceso-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0 auto 10px auto;
+}
+
+/* Texto */
+.proceso-card h3,
+.proceso-card p {
+  text-align: center;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 1023px) {
+  .proceso-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proceso-card {
+    max-width: 100%;
+    flex: none;
+    width: 100%;
+  }
+
+  .proceso-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Contenedor principal */
+.proceso-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: stretch;   /* todas las tarjetas se estiran a la misma altura */
+}
+
+/* Tarjetas del proceso */
+.proceso-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;       /* opcional */
+}
+
+/* Imagen dentro de cada tarjeta */
+.proceso-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0 auto 10px auto;
+}
+
+/* Texto */
+.proceso-card h3,
+.proceso-card p {
+  text-align: center;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 1023px) {
+  .proceso-container {
+    grid-template-columns: 1fr;   /* se apilan en una sola columna */
+  }
+
+  .proceso-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 769px) {
+
+  /* Contenedor de las 5 tarjetas */
+  .proceso-timeline .timeline {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;   /* Fuerza que todas tengan la misma altura */
+    gap: 30px;
+  }
+
+  /* Tarjetas */
+  .proceso-timeline .timeline-step {
+    width: 18%;
+    min-height: 560px;      /* Ajusta este valor según el tamaño deseado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 25px 20px 30px;
+  }
+
+  /* Número superior */
+  .proceso-timeline .step-number {
+    margin-bottom: 15px;
+    flex-shrink: 0;
+  }
+
+  /* Título */
+  .proceso-timeline .timeline-step h3 {
+    min-height: 110px;      /* Reserva espacio para títulos largos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 15px 0;
+    text-align: center;
+  }
+
+  /* Imagen */
+  .proceso-timeline .timeline-step img {
+    width: 160px;
+    height: 160px;          /* Todas las imágenes ocupan el mismo espacio */
+    object-fit: contain;
+    margin: 0 auto 20px;
+    flex-shrink: 0;
+  }
+
+  /* Descripción */
+  .proceso-timeline .timeline-step p {
+    margin-top: auto;       /* Empuja el texto hacia la parte inferior */
+    min-height: 90px;       /* Uniformiza el bloque de descripción */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+/* ==========================================================
+   SECCIÓN "CUIDADO DEL PLANETA"
+   Fondo ecológico elegante con degradado suave
+   Coloca este bloque al FINAL de tu styles.css
+   ========================================================== */
+
+.planet-care {
+  /* Degradado ecológico que combina con la paleta lila/azul de NIVALIS */
+  background:
+    radial-gradient(circle at top center,
+      rgba(120, 255, 180, 0.18) 0%,
+      rgba(0, 212, 255, 0.10) 30%,
+      rgba(199, 166, 247, 0.00) 60%
+    ),
+    linear-gradient(
+      180deg,
+      #d8cff0 0%,
+      #cfc3ee 35%,
+      #c7a6f7 70%,
+      #bfa0f2 100%
+    );
+
+  color: #240046;
+  padding: 80px 20px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Halo decorativo superior para reforzar el concepto ecológico */
+.planet-care::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 300px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(120, 255, 180, 0.18) 0%,
+    rgba(0, 180, 216, 0.10) 40%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  pointer-events: none;
+}
+
+/* Asegura que el contenido quede por encima del efecto */
+.planet-care .content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título */
+.planet-care h2 {
+  font-weight: 800;
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+  color: #240046;
+}
+
+/* Imagen central */
+.planet-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.planet-image img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(36, 0, 70, 0.15);
+}
+
+/* Texto descriptivo */
+.planet-care p {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.15rem;
+  color: #2c2c2c;
+}
+
+/* ==========================================================
+   AJUSTE RESPONSIVE (MÓVIL)
+   Mantiene armonía sin afectar la visualización
+   ========================================================== */
+@media (max-width: 768px) {
+  .planet-care {
+    padding: 60px 20px;
+    border-radius: 16px;
+  }
+
+  .planet-care::before {
+    width: 500px;
+    height: 220px;
+    top: -80px;
+  }
+
+  .planet-care h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .planet-image img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .planet-care p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
